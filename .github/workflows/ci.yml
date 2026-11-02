@@ -5,11 +5,12 @@ on:
     branches: [ main ]
     paths:
       - 'problems/**' # 只有當 problems/ 資料夾下的檔案有變動時才觸發 CI
+      - '.github/workflows/**' # 新增這行：改 CI 設定檔時也會觸發
   pull_request:
     branches: [ main ]
     paths:
       - 'problems/**'
-      - '.github/workflows/**' # 新增這行：改 CI 設定檔時也會觸發
+      - '.github/workflows/**'
 
 jobs:
   test:
