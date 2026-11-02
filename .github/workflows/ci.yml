@@ -9,6 +9,7 @@ on:
     branches: [ main ]
     paths:
       - 'problems/**'
+      - '.github/workflows/**' # 新增這行：改 CI 設定檔時也會觸發
 
 jobs:
   test:
